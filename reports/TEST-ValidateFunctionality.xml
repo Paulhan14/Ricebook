@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Validate Functionality" errors="0" tests="13" failures="0" time="1.444" timestamp="2021-11-18T13:48:32">
+  <testcase classname="Validate Functionality" name="should register a user" time="0.199"></testcase>
+  <testcase classname="Validate Functionality" name="should login the user" time="0.056"></testcase>
+  <testcase classname="Validate Functionality" name="should add new article" time="0.112"></testcase>
+  <testcase classname="Validate Functionality" name="should add another new article" time="0.111"></testcase>
+  <testcase classname="Validate Functionality" name="should give me two or more articles" time="0.112"></testcase>
+  <testcase classname="Validate Functionality" name="should return an article with a specified id" time="0.055"></testcase>
+  <testcase classname="Validate Functionality" name="should return articles with a specified user name" time="0.065"></testcase>
+  <testcase classname="Validate Functionality" name="should add a new comment" time="0.252"></testcase>
+  <testcase classname="Validate Functionality" name="should update a comment" time="0.289"></testcase>
+  <testcase classname="Validate Functionality" name="should put headline" time="0.065"></testcase>
+  <testcase classname="Validate Functionality" name="should get headline" time="0.056"></testcase>
+  <testcase classname="Validate Functionality" name="should get headline, given userName" time="0.054"></testcase>
+  <testcase classname="Validate Functionality" name="should logout the user" time="0.011"></testcase>
+</testsuite>
+</testsuites>
