@@ -1,15 +1,13 @@
-slip day used for final project: 1
+# Ricebook
 
-{
+## A Social Media Platform
 
-    "netid": "jh135",
-    
-    "username": "paul2",
-    
-    "password": "asdf1234",
-    
-    "frontend": "ruthless-jail.surge.sh",
-    
-    "backend": "https://final-ricebookserver-jh135.herokuapp.com/"
-    
-}
+### Supports:
+
+Account Registration
+
+Login Through Google
+
+Sending Posts with or without images
+
+Upload profile pictures
