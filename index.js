@@ -16,9 +16,6 @@ require("./schema/User");
 require("./schema/Article");
 require("./schema/Profile");
 
-const connectionString =
-	"mongodb+srv://dbAdmin:4Z3fRvQAT%40MH%7E%23%23@cluster0.vkbul.mongodb.net/ricebookDB?retryWrites=true&w=majority";
-
 mongoose
 	.connect(connectionString)
 	.then((res) => console.log("Connected to DB"))
