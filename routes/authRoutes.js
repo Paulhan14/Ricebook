@@ -7,7 +7,7 @@ const passport = require("passport");
 
 const cookieKey = "sid";
 
-const clientUrl = "http://ruthless-jail.surge.sh";
+const clientUrl = "https://ruthless-jail.surge.sh";
 // const clientUrl = "http://localhost:3000";
 
 /**
