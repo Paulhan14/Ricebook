@@ -1,20 +1,20 @@
 const cookieParser = require("cookie-parser");
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
+// const cors = require("cors");
 
 const session = require("express-session");
 const passport = require("passport");
 require("passport-google-oauth").OAuth2Strategy;
 
-const clientUrl = "https://final-ricebookserver-jh135.herokuapp.com/";
+// const clientUrl = "https://final-ricebookserver-jh135.herokuapp.com/";
 // const clientUrl = "http://localhost:3000";
 // fontend origin
-const corsOptions = {
-	origin: `${clientUrl}`,
-	credentials: true,
-	exposedHeaders: ["set-cookie"],
-};
+// const corsOptions = {
+// 	origin: `${clientUrl}`,
+// 	credentials: true,
+// 	exposedHeaders: ["set-cookie"],
+// };
 
 require("./schema/User");
 require("./schema/Article");
@@ -34,7 +34,7 @@ require("./services/passport");
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(
 	session({
 		secret: "doNotGuessTheSecret",
