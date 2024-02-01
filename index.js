@@ -7,7 +7,7 @@ const session = require("express-session");
 const passport = require("passport");
 require("passport-google-oauth").OAuth2Strategy;
 
-const clientUrl = "https://ruthless-jail.surge.sh/";
+const clientUrl = "https://final-ricebookserver-jh135.herokuapp.com/";
 // const clientUrl = "http://localhost:3000";
 // fontend origin
 const corsOptions = {
