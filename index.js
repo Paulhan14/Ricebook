@@ -7,7 +7,8 @@ const session = require("express-session");
 const passport = require("passport");
 require("passport-google-oauth").OAuth2Strategy;
 
-const clientUrl = "https://ruthless-jail.surge.sh";
+const clientUrl = "https://final-ricebookserver-jh135.herokuapp.com/";
+// const clientUrl = "https://ruthless-jail.surge.sh";
 // const clientUrl = "http://localhost:3000";
 // fontend origin
 const corsOptions = {
@@ -22,7 +23,7 @@ require("./schema/Profile");
 
 mongoose
 	.connect(
-		`mongodb+srv://dbAdmin:${process.env.MONGODB_ADMIN_PASSWORD}@cluster0.vkbul.mongodb.net/?retryWrites=true&w=majority`
+		`mongodb+srv://dbAdmin:${encodeURIComponent(process.env.MONGODB_ADMIN_PASSWORD)}@cluster0.vkbul.mongodb.net/?retryWrites=true&w=majority`
 	)
 	.then((res) => console.log("Connected to DB"))
 	.catch((err) => console.log(err));
@@ -46,6 +47,14 @@ require("./routes/authRoutes")(app);
 require("./routes/profileRoutes")(app);
 require("./routes/followingRoutes")(app);
 require("./routes/articleRoutes")(app);
+
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static("frontend/build"));
+	const path = require("path");
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+	});
+}
 
 // Get the port from the environment, i.e., Heroku sets it
 const port = process.env.PORT || 4200;
