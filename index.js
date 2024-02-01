@@ -7,8 +7,7 @@ const session = require("express-session");
 const passport = require("passport");
 require("passport-google-oauth").OAuth2Strategy;
 
-const clientUrl = "https://final-ricebookserver-jh135.herokuapp.com/";
-// const clientUrl = "https://ruthless-jail.surge.sh";
+const clientUrl = "https://ruthless-jail.surge.sh";
 // const clientUrl = "http://localhost:3000";
 // fontend origin
 const corsOptions = {
@@ -47,14 +46,6 @@ require("./routes/authRoutes")(app);
 require("./routes/profileRoutes")(app);
 require("./routes/followingRoutes")(app);
 require("./routes/articleRoutes")(app);
-
-if (process.env.NODE_ENV === "production") {
-	app.use(express.static("frontend/build"));
-	const path = require("path");
-	app.get("*", (req, res) => {
-		res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
-	});
-}
 
 // Get the port from the environment, i.e., Heroku sets it
 const port = process.env.PORT || 4200;
