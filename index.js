@@ -51,10 +51,12 @@ require("./routes/articleRoutes")(app);
 
 app.use(express.static("frontend/build/"));
 app.get("/", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+	console.log("got request " + req.url);
+	res.sendFile("./frontend/build/index.html");
 });
 app.get("/favicon.ico", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "frontend", "build", "favicon.ico"));
+	console.log("got request " + req.url);
+	res.sendFile("./frontend/build/favicon.ico");
 });
 
 // Get the port from the environment, i.e., Heroku sets it
